@@ -6,12 +6,13 @@ using UnityEngine;
 
 public class AnimatorController : MonoBehaviour
 {
-    [HideInInspector] public Animator anim;
+    public GameObject robloxPlayerBody;
+    private Animator anim;
     private PlayerController _playerController;
 
     private void Start()
     {
-        anim = gameObject.GetComponent<Animator>();
+        anim = robloxPlayerBody.GetComponentInChildren<Animator>();
         _playerController = gameObject.GetComponent<PlayerController>();
     }
 
