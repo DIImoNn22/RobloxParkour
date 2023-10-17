@@ -628,7 +628,7 @@ Animator:
   m_GameObject: {fileID: 6656097989511178865}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 94bbceccfc6521a43a5f2e1a7006a534, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9345aa6cc1702d94b89e3b9d0adbc6ce, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -669,7 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 586567d278fe5914499e8d99d67f8061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  robloxPlayerBody: {fileID: 0}
 --- !u!114 &6274892482340794573
 MonoBehaviour:
   m_ObjectHideFlags: 0
