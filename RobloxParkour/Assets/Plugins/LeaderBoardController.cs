@@ -11,9 +11,9 @@ public class LeaderBoardController : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("CoinsAmount"))
         {
-            passedLevelsAmount = PlayerPrefs.GetInt("CoinsAmount");
+            coinsAmount = PlayerPrefs.GetInt("CoinsAmount");
         }
-        SetToLeader(passedLevelsAmount);
+        SetToLeader(coinsAmount);
     }
 
     public void SetToLeader(int value)
