@@ -28,13 +28,13 @@ public class ThirdPersonCamera : MonoBehaviour
 
     private void Update()
     {
-        //if (Input.GetKey(KeyCode.Mouse1))
-        //{
+        if (Input.GetKey(KeyCode.Mouse1))
+        {
             currentX += Input.GetAxis("Mouse X");
             currentY += Input.GetAxis("Mouse Y");
 
             currentY = Mathf.Clamp(currentY, Y_ANGLE_MAX, Y_ANGLE_MIN);
-        //}
+        }
             
         float scrollWheel = Input.GetAxis("Mouse ScrollWheel");
         float newDistance = distance - scrollWheel * zoomSpeed;

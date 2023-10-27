@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.UI;
+using Unity.VisualScripting;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour 
 {
@@ -13,6 +15,9 @@ public class PlayerController : MonoBehaviour
 	public float turnSpeed = 300.0f;
 	public float gravityValue = -9.81f;
 
+	[Header("Check Point")]
+	public Vector3 _savedPosition;
+
 	[Header("Jump")]
 	public LayerMask groundLayer;
 	public Transform groundChecker;
@@ -22,11 +27,14 @@ public class PlayerController : MonoBehaviour
 
 	private CharacterController _controller;
 	private Animator _anim;
-	
-	private void Start()
+
+    private void Start()
 	{
         _controller = GetComponent<CharacterController>();
         _anim = GetComponentInChildren<Animator>();
+
+        _savedPosition = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
+        this.transform.position = _savedPosition;
     }
 
 	void Update()
